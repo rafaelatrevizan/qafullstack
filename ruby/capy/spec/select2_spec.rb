@@ -32,15 +32,20 @@ describe 'Select2', :select2 do
                 visit 'https://training-wheels-protocol.herokuapp.com/apps/select2/multi.html'
             end   
 
-            it 'seleciona atores' do
+            def seleciona(ator)
                find('.select2-selection--multiple').click
-               sleep 1
+               find('.select2-search__field').set ator
+               find('.select2-results__option').click                
             end
 
-            it 'seleciona atores por nome pela busca' do
-                find('.select2-selection--multiple').click
+            it 'selecionar atores' do
+
+               atores = ['Jim Carrey', 'Owen Wilson', 'Kevin James']
                 
-                
+               atores.each do |a|
+                seleciona(a)
+               end  
+                sleep 2
             end
 
     end
