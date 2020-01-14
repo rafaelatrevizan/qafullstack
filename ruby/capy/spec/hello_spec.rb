@@ -1,6 +1,4 @@
 describe "Meu primeiro script", :hello, :smoke do
- 
-
   it "visitar a página" do
     visit "/"
     sleep 3

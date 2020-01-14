@@ -17,6 +17,12 @@ RSpec.configure do |config|
   config.before(:example) do
     page.current_window.resize_to(1280, 800)
   end
+
+  config.after(:example) do |e|
+    nome = e.description.gsub(/[^A-Za-z0-9 ]/, "").tr(" ", "_")
+    page.save_screenshot("log/" + nome + ".png") if e.exception
+    #exception tira print de cenários que falharam
+  end
 end
 
 #driver default do selenium é o Firefox
