@@ -2,7 +2,7 @@ describe 'Caixa de seleção', :upload do
 
     before(:each) do
 
-        visit 'https://training-wheels-protocol.herokuapp.com/upload'
+        visit 'upload'
 
         #pwd = método que retorna o caminho que tem o diretório de execução
         @arquivo = Dir.pwd + '/spec/fixtures/arquivo.txt'

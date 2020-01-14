@@ -1,7 +1,7 @@
 describe 'Caixa de seleção', :checkbox do
 
     before(:each) do
-        visit 'https://training-wheels-protocol.herokuapp.com/checkboxes'
+        visit 'checkboxes'
     end
 
     #check e uncheck só funcionam com id ou name
